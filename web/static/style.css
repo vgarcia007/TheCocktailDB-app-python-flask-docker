@@ -30,3 +30,7 @@ main > .container {
   height: 42px;
   width: 42px;
 }
+
+footer {
+  margin-top: 100px!important;
+  }

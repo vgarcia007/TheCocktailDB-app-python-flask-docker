@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+    web:
+        image: 'cocktail-app-dev'
+        ports:
+            - '5000:5000'
+        environment:
+            FLASK_APP: 'app.py'
+            FLASK_ENV: 'development'
+            API_KEY: '1'
+            API_URL: 'https://www.thecocktaildb.com/api/json/v1/'
+            
