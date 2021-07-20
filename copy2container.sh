@@ -1,0 +1,1 @@
+docker cp web docker-python_web_1:/

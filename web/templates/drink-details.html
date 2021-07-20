@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="flex-shrink-1">
+    <div class="px-4 py-5 mt-5 text-center bg-white">
+		<h1 class="display-5 fw-bold">{{ cocktail.strDrink }}</h1>
+	</div>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+			<div class="col">
+				<div class="card shadow-sm">
+					<img src="{{ cocktail.strDrinkThumb }}" class="card-img-top">
+					<div class="card-body">
+						<div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">{{ cocktail.strAlcoholic }}</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card shadow-sm">
+					<div class="card-body">
+						<h2>Ingredients</h2>
+						<table class="table">
+							<tbody>
+                            {% if cocktail.strIngredient1 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient1 }}</td>
+									<td>{{ cocktail.strMeasure1 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredien2 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient2 }}</td>
+									<td>{{ cocktail.strMeasure2 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient3 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient3 }}</td>
+									<td>{{ cocktail.strMeasure3 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient4 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient4 }}</td>
+									<td>{{ cocktail.strMeasure4 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient5 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient5 }}</td>
+									<td>{{ cocktail.strMeasure5 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient5 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient5 }}</td>
+									<td>{{ cocktail.strMeasure5 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient5 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient5 }}</td>
+									<td>{{ cocktail.strMeasure5 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient5 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient5 }}</td>
+									<td>{{ cocktail.strMeasure5 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient6 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient6 }}</td>
+									<td>{{ cocktail.strMeasure6 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient7 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient7 }}</td>
+									<td>{{ cocktail.strMeasure7 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient8 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient8 }}</td>
+									<td>{{ cocktail.strMeasure8 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient9 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient9 }}</td>
+									<td>{{ cocktail.strMeasure9 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient10 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient10 }}</td>
+									<td>{{ cocktail.strMeasure10 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient11 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient11 }}</td>
+									<td>{{ cocktail.strMeasure11 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient12 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient12 }}</td>
+									<td>{{ cocktail.strMeasure12 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient13 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient13 }}</td>
+									<td>{{ cocktail.strMeasure13 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient14 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient14 }}</td>
+									<td>{{ cocktail.strMeasure14 }}</td>
+								</tr>
+                            {% endif %}
+                            {% if cocktail.strIngredient15 != None %}
+								<tr>
+									<td>{{ cocktail.strIngredient15 }}</td>
+									<td>{{ cocktail.strMeasure15 }}</td>
+								</tr>
+                            {% endif %}
+                            </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card shadow-sm">
+					<div class="card-body">
+						<h2>Preparation</h2>
+						<p>{{ cocktail.strInstructions }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock %}
