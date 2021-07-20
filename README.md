@@ -1,4 +1,4 @@
-# docker-python
+# TheCocktailDB-app-python-flask-docker
 
 Demo: https://cocktaildb.rosenheim.dev/
 
