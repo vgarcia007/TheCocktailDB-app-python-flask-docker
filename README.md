@@ -1,16 +1,16 @@
 # docker-python
 
-Build Docker Container and start app:
+Build Docker Container:
 ```
-make compose
+make build-dev
 ```
 
-Stop Container
+Start Docker Container:
 ```
-make stop
+make compose-dev
 ```
 
 Update files (/web/) in running Container
 ```
-make update
+make update-dev
 ```
