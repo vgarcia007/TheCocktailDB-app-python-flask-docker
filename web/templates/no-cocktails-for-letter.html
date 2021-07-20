@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="flex-shrink-0">
+	<div class="px-4 py-5 my-5 text-center bg-white">
+		<h1 class="display-5 fw-bold">Sorry</h1>
+		<div class="col-lg-6 mx-auto">
+			<p class="lead mb-4">There are no cocktails starting with letter <b>{{ letter }}</b></p>
+		</div>
+	</div>
+	<div class="px-4 py-5 my-5 text-center bg-white">
+		<h2 class="display-5 fw-bold">Browse Cocktails</h2>
+		<div class="col-lg-6 mx-auto">
+			<div class="container">
+                {% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
+                    <a class="btn btn-primary btn-alphabet" href="{{ url_for('cocktails_by_letter' ,letter=letter) }}">{{ letter }}</a>
+				{% endfor %}
+            </div>
+		</div>
+	</div>
+</main>
+{% endblock %}

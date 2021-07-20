@@ -33,8 +33,12 @@ def cocktails_by_letter(letter):
 
     url = api_url + 'search.php?f=' + letter
     cocktails = requests.get(url)
+    cocktails_json = cocktails.json()
 
-    return render_template('drinks.html', cocktails=cocktails.json())
+    if cocktails_json['drinks'] == None:
+        return render_template('no-cocktails-for-letter.html', letter=letter)
+
+    return render_template('drinks.html', cocktails=cocktails_json)
 
 
 @app.route('/cocktail/<iid>')
