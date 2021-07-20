@@ -1,14 +1,14 @@
-build:
-	cd web && docker build --no-cache -t compose-flask .
+build-dev:
+	cd web && docker build --no-cache -t cocktail-app-dev .
 
-compose: build
-	docker-compose up
+compose-dev:
+	docker-compose -f docker-compose-dev.yml up -d
 
-stop:
-	docker-compose down
+build-prod:
+	cd web && docker build --no-cache -t cocktail-app-prod .
+
+compose-prod:
+	docker-compose up -d
 
 update:
-	/bin/bash copy2container.sh
-
-buhu:
-	echo "test"
+	docker cp web thecocktaildb-app-python-flask-docker_web_1:/
