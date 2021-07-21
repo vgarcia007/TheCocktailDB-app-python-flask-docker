@@ -13,19 +13,18 @@
 		<div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
 			<div class="tm-bg-gray tm-video-details">                
 				<div class="mb-4 d-flex flex-wrap">
-					<div class="mr-4 mb-2">
-						<span class="tm-text-gray-dark">Category: </span><span class="tm-text-primary">{{ cocktail.strCategory }}</span>
+					<div class="me-4 mb-1">
+						<span class="tm-text-gray-dark">Category: </span><span class="tm-text-primary mr-3">{{ cocktail.strCategory }}</span>
 					</div>
-					<div class="mr-4 mb-2">
-						<span class="tm-text-gray-dark">Type: </span><span class="tm-text-primary">{{ cocktail.strAlcoholic }}</span>
+					<div class="me-4 mb-1">
+						<span class="tm-text-gray-dark">Type: </span><span class="tm-text-primary mr-3">{{ cocktail.strAlcoholic }}</span>
 					</div>
-				</div>
-				<div class="mb-4 d-flex flex-wrap">
-					<div class="mr-4 mb-2">
-						<span class="tm-text-gray-dark">Glass: </span><span class="tm-text-primary">{{ cocktail.strGlass }}</span>
+					<div class="mr-4 mb-1">
+						<span class="tm-text-gray-dark">Glass: </span><span class="tm-text-primary mr-3">{{ cocktail.strGlass }}</span>
 					</div>
 				</div>
-				<div class="mb-4">
+
+				<div class="me-4">
 					<h3 class="tm-text-gray-dark mb-3">Preparation</h3>
 					<p>{{ cocktail.strInstructions }}</p>
 				</div>
@@ -129,16 +128,17 @@
 						</tbody>
 					</table>
 				</div>
-
-
-
+				{% if cocktail.strTags != None %}
 				<div>
 					<h3 class="tm-text-gray-dark mb-3">Tags</h3>
-					{% set tags = cocktail.strTags.split(',') %}
-					{% for tag in tags %}
-						<a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">{{ tag }}</a>
-					{% endfor %} 
+					
+						{% set tags = cocktail.strTags.split(',') %}
+						{% for tag in tags %}
+							<a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">{{ tag }}</a>
+						{% endfor %}
+					
 				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
