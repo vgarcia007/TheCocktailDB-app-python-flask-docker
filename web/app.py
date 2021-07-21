@@ -38,7 +38,7 @@ def cocktails_by_letter(letter):
     if cocktails_json['drinks'] == None:
         return render_template('no-cocktails-for-letter.html', letter=letter)
 
-    return render_template('drinks.html', cocktails=cocktails_json)
+    return render_template('drinks.html', cocktails=cocktails_json, current_letter=letter)
 
 
 @app.route('/cocktail/<iid>')
